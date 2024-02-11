@@ -1,1 +1,243 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* variables, fonts */
+
+:root {
+    --main-color: #3f51b5;
+    --dark-color: #10002b;
+    --yellow-color: #faea0b;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto&display=swap');
+
+html, body { 
+    height: 100%; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 3rem 12rem;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.img-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--main-color); */
+    padding: 20px;
+}
+
+.img-cont img {
+    width: 100%;
+    max-width: 600px; /* Adjust the max-width as needed */
+    height: auto;
+}
+
+.form-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    text-align: center;
+    border: solid 1px var(--main-color);
+    padding: 2rem 3rem 1rem 3rem;
+}
+
+form .name {
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
+}
+
+.links {
+    padding: 0.5rem 0 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust the margin as needed for spacing between paragraphs */
+  }
+
+.links .fb {
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px; 
+}
+
+.links .a {
+    text-decoration: none;
+    color: #000;
+    font-size: smaller;
+}
+
+.form1 {
+    text-align: center;
+    border: solid 1px var(--main-color);
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.form1 .signup {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 100%;
+    line-height: 1.5rem;
+    border: solid 1px var(--main-color);
+    width: 20rem;
+
+    &:focus {
+        border: solid 1px var(--dark-color);
+    }
+}
+
+button {
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 21rem;
+    font-size: larger;
+
+    &:hover {
+        background-color: var(--dark-color);
+    }
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    color: #777; 
+    padding-top: 1rem;
+    
+}
+
+.bottom-line {
+    flex: 1;
+    height: 1px;
+    background-color: #777; 
+    margin: 0 10px; 
+  }
+  
+  .or {
+    padding: 0 10px; 
+  }
+
+
+  .form2 {
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+  
+  .form2 p {
+    margin: 0;
+  }
+  
+  .form2 .apps {
+    display: flex;
+    justify-content: center; 
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .apps .ios,
+  .apps .android {
+    display: flex;
+    align-items: center; 
+    background-color: #000;
+    margin: 0 0.5rem;
+    /* padding: 0 0.5rem; */
+    color: #fff;
+    font-size: small;
+    border-radius: 10px;
+    height: 3rem;
+    width: calc(40% - 1rem); 
+  }
+  
+  .apps .ios img,
+  .apps .android img {
+    /* margin-right: 0.5rem;  */
+    padding: 0 0.5rem;
+  }
+  
+  .apps .ios p,
+  .apps .android p {
+    text-align: center; 
+    margin: 0; 
+  }
+  
+  
+  /* .form2 {
+    text-align: center;
+    background-color: #777;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0 0.5rem 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form2 p {
+    margin: 0; 
+  }
+  .form2 .apps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .apps .ios,
+  .apps .android {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    margin: 0 0.5rem;
+    color: #fff;
+    font-size: small;
+    border-radius: 10px;
+    height: 3rem;
+    justify-content: center;
+    width: calc(50% - 1rem);
+    
+  }
+
+.apps .ios img,
+.apps .android img {
+  margin-right: 0.5rem; 
+}
+
+.apps .ios p,
+.apps .android p {
+  flex-grow: 1;
+  text-align: center;  
+}
+ */
