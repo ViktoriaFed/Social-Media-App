@@ -20,7 +20,7 @@
 
                     <input type="password" id="password" placeholder="Password" name="password" required> <br>
 
-                    <button type="submit">Log in</button>
+                    <button (click)="onLoginClick()" class="login" type="submit">Log in</button>
 
                     <div class="separator">
                         <span class="bottom-line"></span>
@@ -34,12 +34,12 @@
                             <a href="facebook.com" class="fb">Log in with Facebook</a>
                         </p>
 
-                        <p><a href="#" class="a">Forgot password?</a></p>
+                        <p><a (click)="onForgotPasswordClick()" href="#" class="a">Forgot password?</a></p>
                     </div>
                 </form>
 
                 <div class="form1">
-                    <p>Don't have an account? <a href="#" class="signup">Sign up</a></p>
+                    <p>Don't have an account? <button (click)="onCreateAccountClick()" class="signup">Sign up</button></p>
                 </div>
 
                 <div class="form2">

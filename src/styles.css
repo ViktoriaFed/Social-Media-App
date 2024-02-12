@@ -17,6 +17,8 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
+/*HOMEPAGE*/ 
+
 .container {
     height: 100%;
     display: grid;
@@ -96,9 +98,12 @@ form .name {
 }
 
 .form1 .signup {
-    text-decoration: none;
+    border: none;
+    background-color: #fff;
     color: var(--main-color);
+    font-size: medium;
     font-weight: bold;
+    cursor: pointer;
 }
 
 input {
@@ -114,7 +119,7 @@ input {
     }
 }
 
-button {
+.login {
     padding: 10px;
     background-color: var(--main-color);
     color: white;
@@ -192,6 +197,9 @@ button {
     text-align: center; 
     margin: 0; 
   }
+
+  /*FOOTER*/ 
+
   footer {
     text-align: center;
     padding: 2rem 0;
@@ -208,6 +216,21 @@ footer span {
     margin-top: 10px;
     color: #777; 
   }
+
+  /*REGISTRATION COMPONENT*/
+
+  .form-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-reg input {
+  margin: 1rem;
+}
+
 
   /*MEDIA QUERIES*/
   /* Add your existing styles here */
