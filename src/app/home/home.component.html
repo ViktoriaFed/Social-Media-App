@@ -16,11 +16,11 @@
                 <form action="">
                     <h3 class="name">WhatsBuzzin</h3>
     
-                    <input type="text" id="username" placeholder="Phone number, username or email" name="username" required>
+                    <input #loginEmail type="text" id="username" placeholder="Phone number, username or email" name="username" required>
 
-                    <input type="password" id="password" placeholder="Password" name="password" required> <br>
+                    <input #loginPassword type="password" id="password" placeholder="Password" name="password" required> <br>
 
-                    <button (click)="onLoginClick()" class="login" type="submit">Log in</button>
+                    <button (click)="onLoginClick(loginEmail, loginPassword)" class="login" type="submit">Log in</button>
 
                     <div class="separator">
                         <span class="bottom-line"></span>

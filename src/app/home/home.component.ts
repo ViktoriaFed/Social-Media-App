@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { RegistrationComponent } from '../registration/registration.component';
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +11,10 @@ import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 })
 export class HomeComponent  implements OnInit {
 
-  state = AuthenticatorCompState.LOGIN;
-
   firebasetsAuth: FirebaseTSAuth;
+  // state = AuthenticatorCompState.LOGIN;
 
-  constructor(private signupSheet: MatBottomSheet){
+  constructor(private signupSheet: MatBottomSheet, private snackBar: MatSnackBar){
     this.firebasetsAuth = new FirebaseTSAuth();
   }
 
@@ -22,31 +22,82 @@ export class HomeComponent  implements OnInit {
     
   }
 
-    onLoginClick(){
-      this.state = AuthenticatorCompState.LOGIN;
+  // onLoginClick(loginEmail: HTMLInputElement, loginPassword: HTMLInputElement) {
+  //   let email = loginEmail.value;
+  //   let password = loginPassword.value;
+  
+  //   if (this.isNotEmpty(email) && this.isNotEmpty(password)) {
+  //     this.firebasetsAuth.signInWith({
+  //       email: email,
+  //       password: password,
+  //       onComplete: (uc) => {
+  //         this.snackBar.open('Logged In', 'Dismiss', {
+  //           duration: 3000, // Set the duration for the notification
+  //           horizontalPosition: 'center',
+  //           verticalPosition: 'bottom',
+  //         });
+  //       },
+  //       onFail: (err) => {
+  //         this.snackBar.open(err, 'Dismiss', {
+  //           duration: 3000, // Set the duration for the notification
+  //           horizontalPosition: 'center',
+  //           verticalPosition: 'bottom',
+  //         });
+  //       },
+  //     });
+  //   }
+  // }
+
+    onLoginClick(
+      loginEmail: HTMLInputElement,
+      loginPassword: HTMLInputElement
+    ){
+      let email = loginEmail.value;
+      let password = loginPassword.value;
+
+    if(this.isNotEmpty(email) && 
+        this.isNotEmpty(password)) {
+
+        this.firebasetsAuth.signInWith(
+          {
+            email: email,
+            password: password,
+            onComplete: (uc) => {
+                alert("Logged In");
+            },
+            onFail: (err) => {
+                alert(err);
+            }
+        }
+        );
+
+}
     }
     
-    onForgotPasswordClick(){
-      this.state = AuthenticatorCompState.FORGOT_PASSWORD;
-    }
-
     onRegisterClick(){
       this.signupSheet.open(RegistrationComponent);
-      this.state = AuthenticatorCompState.REGISTER;
     }
+   
+    onForgotPasswordClick(){
+      this.signupSheet.open(RegistrationComponent);
+        }
 
     isLoginState(){
-      return this.state == AuthenticatorCompState.LOGIN;
     }
 
     isForgotPasswordState(){
-      this.state == AuthenticatorCompState.FORGOT_PASSWORD;
     }
 
     isRegisterState(){
-      this.state == AuthenticatorCompState.REGISTER;
     }
 
+    isNotEmpty(text:string){
+      return text != null && text.length > 0;
+    }
+  
+    isAMatch(text: string, comparedWith: string){
+      return text == comparedWith;
+  }
 }
 export enum AuthenticatorCompState {
       LOGIN,

@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatBottomSheetModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

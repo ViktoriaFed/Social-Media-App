@@ -1,5 +1,5 @@
 <div class="form-reg">
-    <form action="">
+        <form action="">
         <h3 class="name">Create an account</h3>
 
         <input  #registerEmail type="text" id="username" placeholder="Phone number, username or email" name="username" required> <br>
@@ -8,6 +8,7 @@
         <input #registerConfirmPassword  type="password" id="password" placeholder="Confirm password" name="password" required> <br>
 
         <button (click)="onRegisterClick(registerEmail,
-        registerPassword, registerConfirmPassword)" class="login" type="submit">Create account</button>
+        registerPassword, registerConfirmPassword)" class="login" type="button">Create account</button>
     </form>
+   
 </div>

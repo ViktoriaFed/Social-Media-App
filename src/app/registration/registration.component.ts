@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
+import { AuthenticatorCompState } from '../home/home.component';
 
 @Component({
   selector: 'app-registration',
@@ -11,6 +12,8 @@ import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 export class RegistrationComponent implements OnInit {
   firebasetsAuth: FirebaseTSAuth;
 
+  // state = AuthenticatorCompState.REGISTER;//
+
   constructor(private signupSheet: MatBottomSheet){
     this.firebasetsAuth = new FirebaseTSAuth();
   }
@@ -19,6 +22,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   onRegisterClick(
+    
     registerEmail: HTMLInputElement,
     registerPassword: HTMLInputElement,
     registerConfirmPassword: HTMLInputElement)
@@ -48,6 +52,20 @@ export class RegistrationComponent implements OnInit {
          }
        })};
     }
+
+    // onForgotPasswordClick(resetEmail: HTMLInputElement){
+    //   let email = resetEmail.value;
+    //   if(this.isNotEmpty(email)) {
+    //     this.firebasetsAuth.sendPasswordResetEmail(
+    //       {
+    //         email: email,
+    //         onComplete: (err) => {
+    //              alert(`Reset email sent to ${email}`);
+    //         }
+    //      }
+    //     );
+    //   }
+    // }
 
   isNotEmpty(text:string){
     return text != null && text.length > 0;
