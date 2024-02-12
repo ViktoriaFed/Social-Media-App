@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { RegistrationComponent } from '../registration/registration.component';
+import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,11 @@ export class HomeComponent  implements OnInit {
 
   state = AuthenticatorCompState.LOGIN;
 
-  constructor(private signupSheet: MatBottomSheet){}
+  firebasetsAuth: FirebaseTSAuth;
+
+  constructor(private signupSheet: MatBottomSheet){
+    this.firebasetsAuth = new FirebaseTSAuth();
+  }
 
   ngOnInit(): void {
     
@@ -25,7 +30,7 @@ export class HomeComponent  implements OnInit {
       this.state = AuthenticatorCompState.FORGOT_PASSWORD;
     }
 
-    onCreateAccountClick(){
+    onRegisterClick(){
       this.signupSheet.open(RegistrationComponent);
       this.state = AuthenticatorCompState.REGISTER;
     }

@@ -2,10 +2,12 @@
     <form action="">
         <h3 class="name">Create an account</h3>
 
-        <input type="text" id="username" placeholder="Phone number, username or email" name="username" required>
+        <input  #registerEmail type="text" id="username" placeholder="Phone number, username or email" name="username" required> <br>
 
-        <input type="password" id="password" placeholder="Password" name="password" required> <br>
+        <input #registerPassword type="password" id="password" placeholder="Password" name="password" required> <br>
+        <input #registerConfirmPassword  type="password" id="password" placeholder="Confirm password" name="password" required> <br>
 
-        <button (click)="onCreateAccountClick()" class="login" type="submit">Create account</button>
+        <button (click)="onRegisterClick(registerEmail,
+        registerPassword, registerConfirmPassword)" class="login" type="submit">Create account</button>
     </form>
 </div>
