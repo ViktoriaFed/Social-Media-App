@@ -12,8 +12,6 @@ import { AuthenticatorCompState } from '../home/home.component';
 export class RegistrationComponent implements OnInit {
   firebasetsAuth: FirebaseTSAuth;
 
-  // state = AuthenticatorCompState.REGISTER;//
-
   constructor(private signupSheet: MatBottomSheet){
     this.firebasetsAuth = new FirebaseTSAuth();
   }
@@ -53,19 +51,7 @@ export class RegistrationComponent implements OnInit {
        })};
     }
 
-    // onForgotPasswordClick(resetEmail: HTMLInputElement){
-    //   let email = resetEmail.value;
-    //   if(this.isNotEmpty(email)) {
-    //     this.firebasetsAuth.sendPasswordResetEmail(
-    //       {
-    //         email: email,
-    //         onComplete: (err) => {
-    //              alert(`Reset email sent to ${email}`);
-    //         }
-    //      }
-    //     );
-    //   }
-    // }
+    onResetClick(){}
 
   isNotEmpty(text:string){
     return text != null && text.length > 0;

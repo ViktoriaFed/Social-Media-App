@@ -3,6 +3,7 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { RegistrationComponent } from '../registration/registration.component';
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ResetComponent } from '../reset/reset.component';
 
 @Component({
   selector: 'app-home',
@@ -21,32 +22,6 @@ export class HomeComponent  implements OnInit {
   ngOnInit(): void {
     
   }
-
-  // onLoginClick(loginEmail: HTMLInputElement, loginPassword: HTMLInputElement) {
-  //   let email = loginEmail.value;
-  //   let password = loginPassword.value;
-  
-  //   if (this.isNotEmpty(email) && this.isNotEmpty(password)) {
-  //     this.firebasetsAuth.signInWith({
-  //       email: email,
-  //       password: password,
-  //       onComplete: (uc) => {
-  //         this.snackBar.open('Logged In', 'Dismiss', {
-  //           duration: 3000, // Set the duration for the notification
-  //           horizontalPosition: 'center',
-  //           verticalPosition: 'bottom',
-  //         });
-  //       },
-  //       onFail: (err) => {
-  //         this.snackBar.open(err, 'Dismiss', {
-  //           duration: 3000, // Set the duration for the notification
-  //           horizontalPosition: 'center',
-  //           verticalPosition: 'bottom',
-  //         });
-  //       },
-  //     });
-  //   }
-  // }
 
     onLoginClick(
       loginEmail: HTMLInputElement,
@@ -78,8 +53,8 @@ export class HomeComponent  implements OnInit {
       this.signupSheet.open(RegistrationComponent);
     }
    
-    onForgotPasswordClick(){
-      this.signupSheet.open(RegistrationComponent);
+    onResetClick(){
+      this.signupSheet.open(ResetComponent);
         }
 
     isLoginState(){

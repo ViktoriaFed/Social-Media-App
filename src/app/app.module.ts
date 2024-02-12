@@ -12,11 +12,13 @@ import { HomeComponent } from './home/home.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ResetComponent } from './reset/reset.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,

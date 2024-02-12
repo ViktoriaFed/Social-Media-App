@@ -119,7 +119,7 @@ input {
     }
 }
 
-.login {
+.login, .reset {
     padding: 10px;
     background-color: var(--main-color);
     color: white;
@@ -127,11 +127,20 @@ input {
     cursor: pointer;
     border-radius: 10px;
     width: 21rem;
-    font-size: larger;
+    font-size: larger;   
+}
 
-    &:hover {
+.login:hover, 
+.signup:hover,
+.reset:hover {
         background-color: var(--dark-color);
-    }
+}
+
+.resetLink {
+  border:none;
+  background-color: #fff;
+  cursor: pointer;
+  color: #777;
 }
 
 .separator {
