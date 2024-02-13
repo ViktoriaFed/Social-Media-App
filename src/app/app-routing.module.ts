@@ -5,18 +5,10 @@ import { EmailVerificationComponent } from './pages/email-verification/email-ver
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-  {
-    path: "", component: HomeComponent
-},
-{
-  path: "emailVerification", component: EmailVerificationComponent
-},
-{
-  path: "profile", component: ProfileComponent
-},
-{
-  path: "**", component: HomeComponent
-}
+  { path: "emailVerification", component: EmailVerificationComponent },
+  { path: "profile", component: ProfileComponent },
+  { path: "", component: HomeComponent },
+  { path: "**", component: HomeComponent }
 ];
 
 @NgModule({

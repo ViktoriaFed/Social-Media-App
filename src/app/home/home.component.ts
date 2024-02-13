@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { RegistrationComponent } from '../registration/registration.component';
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { ResetComponent } from '../reset/reset.component';
 
 @Component({
@@ -13,9 +12,10 @@ import { ResetComponent } from '../reset/reset.component';
 export class HomeComponent  implements OnInit {
 
   firebasetsAuth: FirebaseTSAuth;
+  
   // state = AuthenticatorCompState.LOGIN;
 
-  constructor(private signupSheet: MatBottomSheet, private snackBar: MatSnackBar){
+  constructor(private signupSheet: MatBottomSheet){
     this.firebasetsAuth = new FirebaseTSAuth();
   }
 
@@ -73,6 +73,7 @@ export class HomeComponent  implements OnInit {
     isAMatch(text: string, comparedWith: string){
       return text == comparedWith;
   }
+
 }
 export enum AuthenticatorCompState {
       LOGIN,
