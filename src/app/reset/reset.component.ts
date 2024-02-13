@@ -25,7 +25,8 @@ export class ResetComponent implements OnInit {
               {
                 email: email,
                 onComplete: (err) => {
-                    alert(`Reset email sent to ${email}`);
+                    // alert(`Reset email sent to ${email}`);
+                    this.resetSheet.dismiss();
                 }
             }
             );

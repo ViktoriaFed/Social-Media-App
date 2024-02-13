@@ -40,10 +40,7 @@ export class RegistrationComponent implements OnInit {
          email: email,
          password: password,
          onComplete: (uc) => {
-          alert("Account Created");
-            registerEmail.value = "";
-            registerPassword.value = "";
-            registerConfirmPassword.value = "";
+          this.signupSheet.dismiss();
          },
          onFail: (err) => {
           alert("Failed to create the account.");

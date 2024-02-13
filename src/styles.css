@@ -112,11 +112,11 @@ input {
     width: 100%;
     line-height: 1.5rem;
     border: solid 1px var(--main-color);
-    width: 20rem;
+    width: 20rem; 
+}
 
-    &:focus {
+input:focus {
         border: solid 1px var(--dark-color);
-    }
 }
 
 .login, .reset {
@@ -131,9 +131,8 @@ input {
 }
 
 .login:hover, 
-.signup:hover,
 .reset:hover {
-        background-color: var(--dark-color);
+  background-color: var(--dark-color);
 }
 
 .resetLink {
@@ -161,7 +160,6 @@ input {
   .or {
     padding: 0 10px; 
   }
-
 
   .form2 {
     text-align: center;
@@ -206,6 +204,12 @@ input {
     text-align: center; 
     margin: 0; 
   }
+
+  /*EMAIL VERIFICATION*/
+  #email-verification {
+    text-align: center;
+    margin-top: 8em;
+}
 
   /*FOOTER*/ 
 

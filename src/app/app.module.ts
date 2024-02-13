@@ -13,12 +13,16 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ResetComponent } from './reset/reset.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EmailVerificationComponent } from './pages/email-verification/email-verification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ResetComponent
+    ResetComponent,
+    ProfileComponent,
+    EmailVerificationComponent
   ],
   imports: [
     BrowserModule,
