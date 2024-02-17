@@ -14,15 +14,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ResetComponent } from './reset/reset.component';
 import { ProfileComponent } from './profile/profile.component';
-import { EmailVerificationComponent } from './pages/email-verification/email-verification.component';
+// import { EmailVerificationComponent } from './pages/email-verification/email-verification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ResetComponent,
-    ProfileComponent,
-    EmailVerificationComponent
+    ProfileComponent
+    // EmailVerificationComponent
   ],
   imports: [
     BrowserModule,

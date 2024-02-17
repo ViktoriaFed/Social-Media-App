@@ -22,12 +22,12 @@ export class AppComponent {
             },
             whenSignedOut: user => {
             },
-            whenSignedInAndEmailNotVerified: user => {
-              this.router.navigate(["emailVerification"]);
-            },
-            whenSignedInAndEmailVerified: user => {
+            // whenSignedInAndEmailNotVerified: user => {
+            //   this.router.navigate(["emailVerification"]);
+            // },
+            // whenSignedInAndEmailVerified: user => {
     
-            },
+            // },
             whenChanged: user => {
     
             }
